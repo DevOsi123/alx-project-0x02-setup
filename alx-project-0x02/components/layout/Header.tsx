@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
@@ -6,9 +7,9 @@ const Header: React.FC = () => {
       <h1 style={styles.title}>My Cool Website</h1>
       <nav>
         <ul style={styles.navList}>
-          <li><a href="/" style={styles.link}>Home</a></li>
-          <li><a href="/about" style={styles.link}>About</a></li>
-          <li><a href="/contact" style={styles.link}>Contact</a></li>
+          <li><Link href="/" style={styles.link}>Home</Link></li>
+          <li><Link href="/home" style={styles.link}>Go to Home Page</Link></li>
+          <li><Link href="/about" style={styles.link}>About</Link></li>
         </ul>
       </nav>
     </header>
