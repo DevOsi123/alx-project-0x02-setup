@@ -18,7 +18,7 @@ interface UsersPageProps {
   users: UserProps[];
 }
 
-const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
+export default function UsersPage({ users }: UsersPageProps) {
   return (
     <div style={{ padding: '2rem' }}>
       <Header />
@@ -34,9 +34,9 @@ const UsersPage: React.FC<UsersPageProps> = ({ users }) => {
       ))}
     </div>
   );
-};
+}
 
-export const getStaticProps = async () => {
+export async function getStaticProps() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
   const data: RawUser[] = await res.json();
 
@@ -55,6 +55,4 @@ export const getStaticProps = async () => {
       users,
     },
   };
-};
-
-export default UsersPage;
+}
