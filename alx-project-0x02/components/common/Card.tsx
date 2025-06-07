@@ -1,5 +1,7 @@
-import React from "react";
-import { type CardProps } from '@/interfaces'; // or '../../interfaces' if not using alias
+// components/common/Card.tsx
+
+import React from 'react';
+import { type CardProps } from '@/interfaces';
 
 const Card: React.FC<CardProps> = ({ title, content }) => {
   return (
